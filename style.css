@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.fondo{
+    font-family: 'Noto Sans JP', sans-serif;
+    background: rgb(26,185,97);
+    background: radial-gradient(circle, rgba(26,185,97,1) 0%, rgba(138,94,0,0.9640231092436975) 66%);
+
+}
+.fondobanner{
+    background-image: url('img/shrekhd.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 50vh;
+    background-position: top center;
+}
+
