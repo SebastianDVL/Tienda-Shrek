@@ -1,11 +1,8 @@
 .fondo{
     font-family: 'Noto Sans JP', sans-serif;
     background: rgba(138,94,0);
-    scrollbar-width: none; 
+   
 }
-.fondo::-webkit-scrollbar {
-    display: none;
-  }
 
 .fondobanner{
     background-image: url('img/shrekhd.png');

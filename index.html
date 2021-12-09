@@ -1,130 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="style.css">
-    <title>Shrek</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Shrek</title>
 </head>
-<body class="fondo">
-    <header class="border-bottom border-4 border-warning">
-        <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
-            <div class="container-fluid">
-            <a class="navbar-brand " href="index.html"><i class="fab fa-stripe-s"></i>hrek</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Multimedia
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Movies</a></li>
-                      <li><a class="dropdown-item" href="#">Characters</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Memes</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Religion</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-warning" type="submit">Search</button>
-                </form>
+
+<body class="fondo text-white">
+  <header class="border-bottom border-4 border-warning">
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="index.html"><i class="fab fa-stripe-s"></i>hrek</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Multimedia
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Movies</a></li>
+                <li><a class="dropdown-item" href="#">Characters</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Memes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Religion</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <img src="img/fonfoshrek.png" alt="Banner-shrek" class="img-fluid w-100">
+    </section>
+
+    <section>
+      <div class="wow container mt-3 animate__animated animate__fadeInUpBig p-5">
+        <div class="row p-3 d-flex justify-content-center">
+          <div class="col-12 col-md-4">
+            <img src="img/shrek.png" alt="Shrek" class="img-fluid w-100">
+          </div>
+          <div class="col-12 col-md-8 text-white">
+            <h2>Shrek Is Love, Shrek Is Life</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quasi harum molestiae magnam deserunt
+              ratione quam animi sit quas odit aspernatur nisi eligendi voluptatem eum cum culpa, exercitationem enim
+              nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit libero, aut iure ex
+              modi veniam id fuga exercitationem distinctio cupiditate labore quibusdam, voluptatum, odit ea enim?
+              Quibusdam, voluptates beatae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas impedit,
+              dignissimos dolorem architecto minus eligendi fugiat? Debitis fugiat atque blanditiis minus iusto, autem
+              eligendi quisquam dignissimos recusandae sunt rem qui.</p>
+            <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample">
+              <i class="fas fa-sign-in-alt me-2"></i> Sign In
+            </button>
+          </div>
+        </div>
+        <div class="row">
+
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-start bg-success text-white" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-warning fw-bolder" id="offcanvasExampleLabel">Do you want to be part of this?
+          </h5>
+          <button type="button" class="btn-close btn-warning text-reset" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <form class="text-warning">
+              <div class="mb-3">
+                <label for="InputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="InputEmail1">
+              </div>
+              <div class="mb-3">
+                <label for="InputUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="InputUsername1">
+              </div>
+              <div class="mb-3">
+                <label for="InputTime" class="form-label">Birthday</label>
+                <input type="date" class="form-control" id="InputDate1">
+              </div>
+              <div class="mb-3">
+                <label for="InputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="InputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="InputPassword2" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="InputPassword2">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Check1">
+                <label class="form-check-label" for="leCheck1"><a href="#" class="text-warning">Terms And
+                    Conditions</a></label>
+              </div>
+              <button type="submit" class="btn btn-warning text-white">Submit</button>
+            </form>
+          </div>
+
+        </div>
+    </section>
+    <section class="fondobanner">
+
+    </section>
+
+
+    <section>
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-12 text-white">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci enim illo sed ea incidunt numquam,
+              expedita quidem dolores labore aliquam inventore sit optio nostrum deserunt vero eos, voluptates beatae.
+              Cupiditate laboriosam iure praesentium, architecto, voluptatem assumenda maxime quis eum voluptates quos
+              eaque id nemo neque ex molestiae veritatis unde illo labore veniam corporis cumque quae. Alias ipsam
+              itaque deserunt assumenda obcaecati, corporis esse consectetur repudiandae, nesciunt quaerat omnis eveniet
+              illum quisquam molestias quidem expedita hic dicta pariatur consequatur possimus. Consectetur nostrum
+              facilis deserunt, expedita voluptas voluptates cupiditate libero totam neque eligendi corporis
+              reprehenderit. Totam illo corporis, sapiente error labore nobis aperiam, quae vitae suscipit ut incidunt
+              rem sunt harum reiciendis. Placeat repudiandae deserunt nam, sequi blanditiis minus nemo perspiciatis
+              dicta cum autem? Dolores ad perspiciatis vero deleniti reprehenderit ratione quos beatae suscipit,
+              delectus possimus sequi reiciendis soluta esse sit fugiat minima porro quaerat aliquam nesciunt temporibus
+              laudantium autem! Dolores, ullam officia! Amet magni dicta, dolore perferendis aliquam, doloribus
+              similique tempora distinctio odio sint temporibus beatae? Sit quam ex corporis suscipit rerum illo facere,
+              dolorem labore incidunt similique maiores fuga? Modi molestiae molestias in voluptatibus quasi quas.
+              Sapiente laborum earum expedita culpa aliquam deserunt, tempore repellendus numquam odit saepe, voluptatum
+              quos architecto, necessitatibus sint distinctio officia sed dolores laudantium dicta hic facilis. Quam
+              optio numquam culpa tenetur quidem aperiam architecto, omnis voluptatem similique, ullam, harum vel
+              debitis iste quo? Nostrum cupiditate, quae ratione id numquam aut fugit enim veritatis voluptate deleniti
+              error nihil nobis cum ad reprehenderit in laborum est facilis reiciendis neque autem. Nostrum, ab? Fugiat
+              nemo ab sunt consequuntur non iusto fuga quia officia hic sed! Voluptatum, quasi. Voluptatibus sint
+              adipisci quae similique ad vitae dolorem cum laboriosam necessitatibus non repudiandae accusantium quod id
+              error sequi iusto enim totam dignissimos odit, illum rerum quam. Ex nostrum distinctio non officiis
+              accusantium facere sunt, eligendi corrupti dolorem in commodi praesentium, vitae obcaecati itaque
+              laudantium eum fugiat hic doloremque similique esse dolor! Alias nisi minus voluptate itaque voluptates,
+              rem dolores excepturi id, consectetur ex nostrum impedit autem blanditiis inventore in error obcaecati
+              officia! Quaerat quae nesciunt commodi, quam, sapiente sint impedit accusantium inventore saepe eligendi
+              pariatur temporibus dolore quisquam modi facere quo aliquam nemo. Ex non aut cumque quidem accusamus sed
+              laudantium! Enim quas voluptate esse id nisi nam laboriosam sunt ab similique. Veritatis, necessitatibus
+              accusantium esse dolores rerum voluptate, quaerat saepe enim voluptatibus laborum asperiores quam magni
+              nostrum totam commodi ut minima exercitationem delectus. Et quae qui praesentium illo error. Incidunt
+              excepturi expedita dolorem laborum magnam, laboriosam praesentium magni temporibus id iusto ratione
+              adipisci inventore placeat.
+              idk
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 my-5 text-white">
+          <div class="col">
+            <div class="card bg-success h-100 border-0 animate__animated animate__bounceInLeft wow">
+              <img src="img/t1.jfif" class="card-img-top" alt="shrek">
+              <div class="card-body b-sucess">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
-          </nav>
-    </header>
-    <main> 
-        <section>
-            <div class="container mt-3 animate__animated animate__fadeInUpBig">
-                <div class="row p-3 d-flex justify-content-center">
-                    <div class="col-12 col-md-4">
-                        <img src="img/shrek.png" alt="Shrek" class="img-fluid w-100">
-                    </div>
-                    <div class="col-12 col-md-8 p-5">
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quasi harum molestiae magnam deserunt ratione quam animi sit quas odit aspernatur nisi eligendi voluptatem eum cum culpa, exercitationem enim nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit libero, aut iure ex modi veniam id fuga exercitationem distinctio cupiditate labore quibusdam, voluptatum, odit ea enim? Quibusdam, voluptates beatae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas impedit, dignissimos dolorem architecto minus eligendi fugiat? Debitis fugiat atque blanditiis minus iusto, autem eligendi quisquam dignissimos recusandae sunt rem qui.</p>
-                        <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                            <i class="fas fa-sign-in-alt me-2"></i> Sign In
-                        </button>
-                    </div>
-                </div>
-                <div class="row">
-
+          </div>
+          <div class="col">
+            <div class="card bg-success h-100 border-0">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of thecard's content.</p>
+              </div>  
+              <img src="img/t2.webp" class="card-img-top" alt="shrek">
+            </div>      
+          </div>
+          <div class="col">
+            <div class="card bg-success h-100 border-0">
+                <img src="img/t3.jpg" class="card-img-top" alt="shrek">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk othe card's content.</p>
                 </div>
             </div>
-            <div class="offcanvas offcanvas-start bg-success text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                <h5 class="offcanvas-title text-warning fw-bolder" id="offcanvasExampleLabel">Do you want to be part of this?</h5>
-                <button type="button" class="btn-close btn-warning text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                <div>
-                  <form class="text-warning">
-                    <div class="mb-3">
-                      <label for="InputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="InputEmail1">
-                    </div>
-                    <div class="mb-3">
-                      <label for="InputUsername" class="form-label">Username</label>
-                      <input type="text" class="form-control" id="InputUsername1">
-                    </div>
-                    <div class="mb-3">
-                      <label for="InputTime" class="form-label">Birthday</label>
-                      <input type="date" class="form-control" id="InputDate1">
-                    </div>
-                    <div class="mb-3">
-                      <label for="InputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="InputPassword1">
-                    </div>
-                    <div class="mb-3">
-                      <label for="InputPassword2" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="InputPassword2">
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="Check1">
-                      <label class="form-check-label" for="leCheck1"><a href="#" class="text-warning">Terms And Conditions</a></label>
-                    </div>
-                    <button type="submit" class="btn btn-warning text-white">Submit</button>
-                  </form>
-                </div>
-              
-            </div>
-        </section>
-        <section class="fondobanner">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-success mt-5 p-5 text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <p>Sebastian Lopez Perez &copy; 2021</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p>Sebastian Lopez Perez &copy; 2021</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p>Sebastian Lopez Perez &copy; 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        </section>
-        <section>
-            <div class="container mt-4">
-                <div class="row">
-                    <div class="col-12 text-white">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci enim illo sed ea incidunt numquam, expedita quidem dolores labore aliquam inventore sit optio nostrum deserunt vero eos, voluptates beatae. Cupiditate laboriosam iure praesentium, architecto, voluptatem assumenda maxime quis eum voluptates quos eaque id nemo neque ex molestiae veritatis unde illo labore veniam corporis cumque quae. Alias ipsam itaque deserunt assumenda obcaecati, corporis esse consectetur repudiandae, nesciunt quaerat omnis eveniet illum quisquam molestias quidem expedita hic dicta pariatur consequatur possimus. Consectetur nostrum facilis deserunt, expedita voluptas voluptates cupiditate libero totam neque eligendi corporis reprehenderit. Totam illo corporis, sapiente error labore nobis aperiam, quae vitae suscipit ut incidunt rem sunt harum reiciendis. Placeat repudiandae deserunt nam, sequi blanditiis minus nemo perspiciatis dicta cum autem? Dolores ad perspiciatis vero deleniti reprehenderit ratione quos beatae suscipit, delectus possimus sequi reiciendis soluta esse sit fugiat minima porro quaerat aliquam nesciunt temporibus laudantium autem! Dolores, ullam officia! Amet magni dicta, dolore perferendis aliquam, doloribus similique tempora distinctio odio sint temporibus beatae? Sit quam ex corporis suscipit rerum illo facere, dolorem labore incidunt similique maiores fuga? Modi molestiae molestias in voluptatibus quasi quas. Sapiente laborum earum expedita culpa aliquam deserunt, tempore repellendus numquam odit saepe, voluptatum quos architecto, necessitatibus sint distinctio officia sed dolores laudantium dicta hic facilis. Quam optio numquam culpa tenetur quidem aperiam architecto, omnis voluptatem similique, ullam, harum vel debitis iste quo? Nostrum cupiditate, quae ratione id numquam aut fugit enim veritatis voluptate deleniti error nihil nobis cum ad reprehenderit in laborum est facilis reiciendis neque autem. Nostrum, ab? Fugiat nemo ab sunt consequuntur non iusto fuga quia officia hic sed! Voluptatum, quasi. Voluptatibus sint adipisci quae similique ad vitae dolorem cum laboriosam necessitatibus non repudiandae accusantium quod id error sequi iusto enim totam dignissimos odit, illum rerum quam. Ex nostrum distinctio non officiis accusantium facere sunt, eligendi corrupti dolorem in commodi praesentium, vitae obcaecati itaque laudantium eum fugiat hic doloremque similique esse dolor! Alias nisi minus voluptate itaque voluptates, rem dolores excepturi id, consectetur ex nostrum impedit autem blanditiis inventore in error obcaecati officia! Quaerat quae nesciunt commodi, quam, sapiente sint impedit accusantium inventore saepe eligendi pariatur temporibus dolore quisquam modi facere quo aliquam nemo. Ex non aut cumque quidem accusamus sed laudantium! Enim quas voluptate esse id nisi nam laboriosam sunt ab similique. Veritatis, necessitatibus accusantium esse dolores rerum voluptate, quaerat saepe enim voluptatibus laborum asperiores quam magni nostrum totam commodi ut minima exercitationem delectus. Et quae qui praesentium illo error. Incidunt excepturi expedita dolorem laborum magnam, laboriosam praesentium magni temporibus id iusto ratione adipisci inventore placeat. Molestias dicta harum natus ad dolor rem, hic beatae, perferendis corrupti veniam nesciunt laboriosam itaque exercitationem doloribus a doloremque aliquam laborum necessitatibus pariatur tempora amet minus. Aut quos ex numquam molestias nostrum voluptatum quae, officiis, at sapiente asperiores autem expedita iure voluptatem nobis modi veniam nemo fugiat doloribus sequi! Aperiam distinctio ab impedit, ad quis earum temporibus dicta nesciunt reiciendis magnam, adipisci recusandae ea quod tempora libero unde tenetur consequatur eveniet aut deleniti vitae excepturi sed molestiae? Voluptates sed libero neque debitis quibusdam voluptatem impedit voluptas cum tempora at placeat quia totam rerum omnis, repudiandae dolor porro. Maxime eaque voluptate saepe a veniam omnis, assumenda eveniet pariatur culpa. Amet error deleniti obcaecati sapiente consequatur, dicta vel laudantium excepturi reiciendis minus in soluta architecto placeat consequuntur culpa nihil fuga ipsam iure eius quis laboriosam tempore vero non hic. Eaque incidunt aperiam deleniti, exercitationem omnis repudiandae quia pariatur, odit eum, quam iste. Atque eveniet nulla doloremque est qui? Temporibus inventore tenetur blanditiis voluptatem officiis beatae dicta consequuntur laborum tempore omnis, illo animi molestias tempora expedita autem quis.
-                            idk
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer></footer>
-
-    <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="wow.min.js"> </script>
+  <script>
+  new WOW().init();
+  </script>
+  <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
 </body>
+
 </html>
