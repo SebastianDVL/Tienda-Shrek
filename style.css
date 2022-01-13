@@ -13,3 +13,19 @@
     background-position: top center;
 }
 
+.banner{
+    background-image: url('img/fonfoshrek.png');
+    background-size: cover;
+    height: 100vh;
+    padding:10%;
+    
+}
+
+.banner h1{
+    font-size: 5em;
+    font-weight:900;
+    font-style: italic;
+    text-shadow:black 1px 15px 8px;
+    color: transparent;
+}
+
