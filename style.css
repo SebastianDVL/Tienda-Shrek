@@ -18,6 +18,7 @@
     background-size: cover;
     height: 100vh;
     padding:10%;
+    z-index: -1;
     
 }
 
