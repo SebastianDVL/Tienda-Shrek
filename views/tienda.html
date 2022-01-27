@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="../style.css">
     <title>Shrek | Tienda</title>
 </head>
-<body>
+<body class="bg-light">
     <header class="border-bottom border-4 border-warning">
         <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
           <div class="container-fluid">
-            <a class="navbar-brand " href="index.html"><i class="fab fa-stripe-s"></i>hrek</a>
+            <a class="navbar-brand " href="../index.html"><i class="fab fa-stripe-s mx-1"></i>hrek</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -25,13 +25,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                  <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     More...
                   </a>
@@ -45,15 +45,19 @@
                   </ul>
                 </li>
               </ul>
-             
+              <div class="d-flex">
+               <i class="fa fa-shopping-cart text-white fs-3 mx-2"></i>
+              </div>
             </div>
           </div>
         </nav>
       </header>
 
       <main>
-          <div class="container mt-5">
-              <div class="row row-cols-1 row-cols-md-5 g-3">
+        
+          <div class="container my-5">
+              <h1 class="mb-5">Productos</h1>
+              <div class="row row-cols-2  row-cols-md-3 row-cols-lg-5 g-3">
 
               </div>
           </div>
