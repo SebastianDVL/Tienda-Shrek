@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="../style.css">
     <title>Shrek | Tienda</title>
 </head>
-<body class="bg-light">
+<body>
     <header class="border-bottom border-4 border-warning">
         <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
           <div class="container-fluid">
-            <a class="navbar-brand " href="../index.html"><i class="fab fa-stripe-s mx-1"></i>hrek</a>
+            <a class="navbar-brand " href="../index.html"><i class="fab fa-stripe-s me-1"></i>hrek</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
                 </li>
               </ul>
               <div class="d-flex">
-               <i class="fa fa-shopping-cart text-white fs-3 mx-2"></i>
+               <a href="#"><i class="fa fa-shopping-cart text-white fs-3 mx-2"></i></a>
               </div>
             </div>
           </div>
@@ -55,13 +55,47 @@
 
       <main>
         
-          <div class="container my-5">
-              <h1 class="mb-5">Productos</h1>
-              <div class="row row-cols-2  row-cols-md-3 row-cols-lg-5 g-3">
+          <div class="container-fluid my-3 g-5">
+              <h1 class="mb-3">Productos</h1>
+              <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
 
               </div>
           </div>
       </main>
+      <section>
+        <div class="modal" id="infoProducto">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-warning">
+                <h5 class="modal-title" id="exampleModalLabel">Shopping Shrek</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                        <img src="../img/antifaz.webp" alt="" class="img-fluid w-100">
+                    </div>
+                    <div class="col-12 col-md-8">
+                      <h4>AJAJJAJA</h5>
+                      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veritatis omnis ex, ducimus asperiores libero rem, t.</h5>
+                        <h5>PRECIO</h5>
+                        <div class="mb-3">
+                          <label class="form-label">Cantidad</label>
+                          <input type="number" class="form-control" id="cantidad" value=1 min=1 max=5>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-success"><i class="fa fa-shopping-cart me-2"></i>Agregar Al Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <script src="../js/controlador.js" type="module"></script>
       <script src="../wow.min.js"> </script>

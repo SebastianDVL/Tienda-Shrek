@@ -1,6 +1,4 @@
 //Funcion para llenar  de productos dinamicamente(Automatico) la tienda 
-export function llenarTienda(){
-
 let productos = [
     {name:"Gafas",img:"../img/antifaz.webp",price:15000,desc: "Gafas De Sol Con Forma De Shrek Fotocromáticas Polarizadas Hombre"},
     {name:"Aretes",img:"../img/aretes.webp",price:8000,desc: "Aretes Pendientes Mujer Y Hombre Con Forma De Shrek De Acero Inoxidable"},
@@ -14,16 +12,19 @@ let productos = [
     {name:"Disfraz",img:"../img/disfraz.webp",price:73000,desc: "Cosplay Shrek Para Niños Halloween 8-9 Años Completo"},
     {name:"Funko",img:"../img/funko.webp",price:118000,desc: "Funko Pop Shrek Para Siempre Caja Y Protector Incluido "},
     {name:"Gorro",img:"../img/gorro.webp",price:20000,desc: "Gorro Tuka Verde Shrek Hombre Mujer De Lana Hecho A Mano"},
-    {name:"Hoodie",img:"../img/hoodie.webp",price:90000,desc: "Buso Saco Hoodie Con Capota Shrek Fondo Negro Hombre XL"},
+    {name:"Hoodie",img:"../img/hoodie.webp",price:90000,desc: "Buso Hoodie Con Capota Nicolas Cage Shrek Fondo Negro Hombre XL"},
     {name:"Juego",img:"../img/juego.webp",price:102000,desc: "Shrek Forever After The Final Chapter PS3 Standard Edition Fisico"},
-    {name:"Juego de Mesa",img:"../img/juegomesa.webp",price:55000,desc: "Operation Shrek Juego De Mesa"},
-    {name:"Kit Imprimible",img:"../img/kit.webp",price:27000,desc: "Kit Imprimible Shrek"},
-    {name:"Lampara",img:"../img/lampara.webp",price:58000,desc: "Lampara Cabeza De Shrek"},
-    {name:"Peluche",img:"../img/peluche.webp",price:83000,desc: "Peluche Tamaño"},
-    {name:"Mascara",img:"../img/mascara.webp",price:17000,desc: "Mascara"},
-    {name:"Tapabocas",img:"../img/tapabocas.webp",price:3000,desc: "Tapabocas"}
+    {name:"Juego de Mesa",img:"../img/juegomesa.webp",price:55000,desc: "Operation Shrek Juego De Mesa Niños Original Español"},
+    {name:"Kit Imprimible",img:"../img/kit.webp",price:27000,desc: "Kit Imprimible Shrek Para Niños 100% Editable"},
+    {name:"Lampara",img:"../img/lampara.webp",price:58000,desc: "Lampara Cabeza De Shrek Con Control Luz Led Color Verde Recargable Con Base"},
+    {name:"Peluche",img:"../img/peluche.webp",price:83000,desc: "Peluche Shrek Luminoso Reversible Original Importado"},
+    {name:"Mascara",img:"../img/mascara.webp",price:17000,desc: "Mascara De Shrek Con Expresion Feliz Adulto"},
+    {name:"Tapabocas",img:"../img/tapabocas.webp",price:3000,desc: "Tapabocas Niños Tema Shrek Verde Lavable Termosellado"}
     
 ]
+export function llenarTienda(){
+
+
 const ROW = document.querySelector('.row')
 
 productos.forEach(producto => {
@@ -32,7 +33,7 @@ productos.forEach(producto => {
     col.classList.add("col")
 
     let card = document.createElement('div')
-    card.classList.add("card","h-100")
+    card.classList.add("card","h-100", "border-0")
 
     let img = document.createElement('img');
     img.src = producto.img
@@ -42,13 +43,13 @@ productos.forEach(producto => {
     let cardBody = document.createElement('div')
     cardBody.classList.add("card-body","border-top","d-flex","flex-column")
 
-    let title = document.createElement('h5')
-    title.classList.add("card-title")
+    let title = document.createElement('h4')
+    title.classList.add("card-title","text-warning","fw-bolder")
     title.textContent = producto.name
 
     let text = document.createElement('p')
     text.classList.add("card-text","text-wrap")
-    text.textContent = producto.desc
+    text.textContent = producto.desc.slice(0,-30) + "..."
 
     let price = document.createElement('h4')
     price.classList.add("fw-normal")
@@ -57,13 +58,13 @@ productos.forEach(producto => {
     let button = document.createElement('button')
     button.classList.add("btn","btn-success")
     button.type = "button"
-    button.innerHTML = "Agregar Al Carrito"
+    button.innerHTML = '<i class ="fa fa-shopping-cart me-1"></i>' + "Agregar Al Carrito"
 
 
     cardBody.appendChild(title)
     cardBody.appendChild(text) 
     cardBody.appendChild(price)
-    cardBody.appendChild(button)
+ 
     card.appendChild(img) 
     card.appendChild(cardBody) 
     col.appendChild(card)

@@ -1,9 +1,13 @@
 .fondo{
     font-family: 'Noto Sans JP', sans-serif;
-    background: rgba(138,94,0);
+    background: rgb(138,94,0);
+    background: linear-gradient(90deg, rgba(138,94,0,1) 0%, rgba(0,0,0,1) 100%);
    
 }
 
+body{
+    background-color: rgb(218, 218, 218);
+}
 .fondobanner{
     background-image: url('img/shrekhd.png');
     background-attachment: fixed;
@@ -19,7 +23,7 @@
     height: 100vh;
     padding:10%;
     z-index: -1;
-    
+    width: 100%;
 }
 
 .banner h1{
@@ -28,5 +32,18 @@
     font-style: italic;
     text-shadow:black 1px 15px 8px;
     color: transparent;
+}
+.card{
+    transition: 0.3s;
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow:5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    transform:scale(1.03);
+}
+.card:active{
+    border:none;
+    box-shadow:none;
 }
 
