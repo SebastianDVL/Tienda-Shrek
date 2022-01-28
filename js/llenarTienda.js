@@ -1,5 +1,6 @@
+
 //Funcion para llenar  de productos dinamicamente(Automatico) la tienda 
-let productos = [
+export let productos = [
     {name:"Gafas",img:"../img/antifaz.webp",price:15000,desc: "Gafas De Sol Con Forma De Shrek Fotocromáticas Polarizadas Hombre"},
     {name:"Aretes",img:"../img/aretes.webp",price:8000,desc: "Aretes Pendientes Mujer Y Hombre Con Forma De Shrek De Acero Inoxidable"},
     {name:"Coleccion Peliculas",img:"../img/blueray.webp",price:32000,desc: "Todas Las Peliculas De Shrek En Blueray (5 Peliculas) Calidad Cine"},
@@ -22,6 +23,7 @@ let productos = [
     {name:"Tapabocas",img:"../img/tapabocas.webp",price:3000,desc: "Tapabocas Niños Tema Shrek Verde Lavable Termosellado"}
     
 ]
+
 export function llenarTienda(){
 
 
@@ -38,7 +40,7 @@ productos.forEach(producto => {
     let img = document.createElement('img');
     img.src = producto.img
     img.classList.add("card-img-top")
-    img.style = "height: 12em" 
+    img.style = "height: 13em" 
 
     let cardBody = document.createElement('div')
     cardBody.classList.add("card-body","border-top","d-flex","flex-column")
@@ -48,7 +50,7 @@ productos.forEach(producto => {
     title.textContent = producto.name
 
     let text = document.createElement('p')
-    text.classList.add("card-text","text-wrap")
+    text.classList.add("card-text","text-muted")
     text.textContent = producto.desc.slice(0,-30) + "..."
 
     let price = document.createElement('h4')
@@ -69,6 +71,7 @@ productos.forEach(producto => {
     card.appendChild(cardBody) 
     col.appendChild(card)
     ROW.appendChild(col)
+
 
 })
 }

@@ -64,7 +64,7 @@
       </main>
       <section>
         <div class="modal" id="infoProducto">
-          <div class="modal-dialog">
+          <div class="modal-dialog border-0">
             <div class="modal-content">
               <div class="modal-header bg-warning">
                 <h5 class="modal-title" id="exampleModalLabel">Shopping Shrek</h5>
@@ -73,23 +73,27 @@
               <div class="modal-body">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 col-md-4">
-                        <img src="../img/antifaz.webp" alt="" class="img-fluid w-100">
+                    <div class="col-12 col-md-5">
+                        <img src="" alt="" class="img-fluid w-100" style="height: 16em" id="imgInfo">
                     </div>
-                    <div class="col-12 col-md-8">
-                      <h4>AJAJJAJA</h5>
-                      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veritatis omnis ex, ducimus asperiores libero rem, t.</h5>
-                        <h5>PRECIO</h5>
-                        <div class="mb-3">
-                          <label class="form-label">Cantidad</label>
-                          <input type="number" class="form-control" id="cantidad" value=1 min=1 max=5>
-                        </div>
+                    <div class="col-12 col-md-7 d-flex flex-column justify-content-between"> 
+                      <div>
+                      <h4 id="title"></h4>
+                      <p id="text"></p>
+                      </div>
+                      <h4 id="price"></h4>
+                        
                     </div>
                   </div>
                 </div>
               </div>
               <div class="modal-footer">
-
+                <div class="d-flex">
+                  <label class="form-label">Cantidad</label>
+                  <input type="number" class="form-control" id="cantidad" value=1 min=1 max=10> 
+                  <button type="button"id="minus">-</button>
+                  <button type="button" id="plus">+</button>
+                </div>
                 <button type="button" class="btn btn-success"><i class="fa fa-shopping-cart me-2"></i>Agregar Al Carrito</button>
               </div>
             </div>

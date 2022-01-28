@@ -4,15 +4,15 @@ import {ampliarInfoProducto} from './ampliarInfoProducto.js'
 
 llenarTienda()
 
-let listaProductos = document.querySelector('.row')
-
 export let infoProducto = new bootstrap.Modal(document.getElementById('infoProducto'))
 
-listaProductos.addEventListener('click',(event)=>{
+let cards = document.querySelectorAll(".card")
 
-    let classNames =["card","card-body"]
-    if(classNames.some(className => event.target.parentNode.classList.contains(className))){
-        ampliarInfoProducto(event)
-    }
+export let element
+
+cards.forEach((card,index) => {
+    card.addEventListener('click',()=>{
+        element  = index
+        ampliarInfoProducto()
+    })
 })
-
