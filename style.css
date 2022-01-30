@@ -8,6 +8,7 @@
 body{
     background-color: rgb(218, 218, 218);
 }
+
 .fondobanner{
     background-image: url('img/shrekhd.png');
     background-attachment: fixed;
@@ -47,4 +48,10 @@ body{
     border:none;
     box-shadow:none;
 }
+input[type="number"]:disabled{
+    background-color: white;
+}
 
+.hide{
+    display: none;
+}

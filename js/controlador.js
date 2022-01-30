@@ -1,6 +1,5 @@
-import {llenarTienda} from './llenarTienda.js'
+import {llenarTienda,productos} from './llenarTienda.js'
 import {ampliarInfoProducto} from './ampliarInfoProducto.js'
-
 
 llenarTienda()
 
@@ -14,5 +13,38 @@ cards.forEach((card,index) => {
     card.addEventListener('click',()=>{
         element  = index
         ampliarInfoProducto()
+    })
+})
+
+const PLUS = document.querySelector("#plus")
+const MINUS = document.querySelector("#minus")
+const CANTIDAD  = document.querySelector("#cantidad")
+
+
+export let cValue 
+
+PLUS.addEventListener('click',(event)=>{
+    event.preventDefault()
+    cValue = CANTIDAD.value
+    if(CANTIDAD.value <10){
+        CANTIDAD.value ++
+    } 
+})
+
+MINUS.addEventListener('click',(event)=>{
+    event.preventDefault()
+    if(CANTIDAD.value > 1){ 
+        CANTIDAD.value --
+    }
+})
+
+const SEARCH = document.querySelector("#search")
+
+
+SEARCH.addEventListener("input", e =>{
+    let value = e.target.value.toLowerCase()
+    productos.forEach((producto,index)=>{
+        let isVisible = producto.name.toLowerCase().includes(value)
+        cards[index].classList.toggle("hide",!isVisible)
     })
 })

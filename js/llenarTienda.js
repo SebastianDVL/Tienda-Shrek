@@ -29,6 +29,7 @@ export function llenarTienda(){
 
 const ROW = document.querySelector('.row')
 
+
 productos.forEach(producto => {
 
     let col = document.createElement('div')
@@ -71,7 +72,5 @@ productos.forEach(producto => {
     card.appendChild(cardBody) 
     col.appendChild(card)
     ROW.appendChild(col)
-
-
 })
 }
