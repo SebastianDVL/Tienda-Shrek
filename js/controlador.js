@@ -20,26 +20,25 @@ const PLUS = document.querySelector("#plus")
 const MINUS = document.querySelector("#minus")
 const CANTIDAD  = document.querySelector("#cantidad")
 
+let val 
 
-export let cValue 
-
-PLUS.addEventListener('click',(event)=>{
-    event.preventDefault()
-    cValue = CANTIDAD.value
+PLUS.addEventListener('click',()=>{
+    val = CANTIDAD.value
     if(CANTIDAD.value <10){
         CANTIDAD.value ++
-    } 
+    }   
 })
 
-MINUS.addEventListener('click',(event)=>{
-    event.preventDefault()
+MINUS.addEventListener('click',()=>{
+    val = CANTIDAD.value
+   
     if(CANTIDAD.value > 1){ 
         CANTIDAD.value --
     }
+ 
 })
 
 const SEARCH = document.querySelector("#search")
-
 
 SEARCH.addEventListener("input", e =>{
     let value = e.target.value.toLowerCase()
