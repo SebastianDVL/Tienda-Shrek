@@ -46,7 +46,9 @@
                 </li>
               </ul>
               <div class="d-flex">
-               <a href="#"><i class="fa fa-shopping-cart text-white fs-3 mx-2"></i></a>
+               <a href="#"><i class="fa fa-shopping-cart text-white fs-3 mx-2"></i>
+                <span id="pildora" class="position-absolute top-10 start-10 translate-middle invisible">99+</span>
+              </a>
               </div>
             </div>
           </div>
@@ -57,7 +59,7 @@
             <div class="">
               <h1 class="my-3 text-muted">Search Products</h1>
               <input type="search" placeholder="Looking For..." class="form-control h-50 mb-3" id="search"></div>
-              <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+              <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="row">
 
               </div>
           </div>
@@ -82,7 +84,7 @@
 
                       <h4 id="price"></h4>
                        <div class="d-flex align-items-center">              
-                          <input type="number" class="form-control w-25 text-center" id="cantidad" value=1 > 
+                          <input type="number" class="form-control w-25 text-center" id="cantidad" value=1 min=1 max=6> 
                           <div class="btn-group mx-1">
                             <button type="button" class="btn btn-warning" id="minus">-</button>
                             <button type="button" class="btn btn-warning" id="plus">+</button>
@@ -95,12 +97,13 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success"><i class="fa fa-shopping-cart me-2"></i>Add To Cart</button>
+                <button type="button" class="btn btn-success" id="agregarProducto"><i class="fa fa-shopping-cart me-2"></i>Add To Cart</button>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
 
       <script src="../js/controlador.js" type="module"></script>
       <script src="../wow.min.js"> </script>

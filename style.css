@@ -7,6 +7,7 @@
 
 body{
     background-color: rgb(218, 218, 218);
+    scroll-behavior: smooth;
 }
 
 .fondobanner{
@@ -48,9 +49,17 @@ body{
     border:none;
     box-shadow:none;
 }
-input[type="number"]:disabled{
+input[type="number"]:read-only{
     background-color: white;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
 
 .hide{
     display: none;

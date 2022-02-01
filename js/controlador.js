@@ -1,43 +1,42 @@
 import {llenarTienda,productos} from './llenarTienda.js'
 import {ampliarInfoProducto} from './ampliarInfoProducto.js'
+import {agregarProducto} from './agregarCarrito.js'
+
 
 llenarTienda()
 
-export let infoProducto = new bootstrap.Modal(document.getElementById('infoProducto'))
+//variables Globales
+let producto={}
+let carrito=[]
 
-let cards = document.querySelectorAll(".card")
+//Ampliar Informacion de producto
+let infoProducto = new bootstrap.Modal(document.getElementById('infoProducto'))
 
-export let element
+let row  = document.querySelector("#row")
 
-cards.forEach((card,index) => {
-    card.addEventListener('click',()=>{
-        element  = index
-        ampliarInfoProducto()
-    })
+row.addEventListener("click", e =>{
+    producto = ampliarInfoProducto(productos)
+    infoProducto.show()
 })
 
+//Funcionalidad input cantidad
 const PLUS = document.querySelector("#plus")
 const MINUS = document.querySelector("#minus")
-const CANTIDAD  = document.querySelector("#cantidad")
-
-let val 
+let cantidad  = document.querySelector("#cantidad")
 
 PLUS.addEventListener('click',()=>{
-    val = CANTIDAD.value
-    if(CANTIDAD.value <10){
-        CANTIDAD.value ++
+    if(cantidad.value <10){
+        cantidad.value ++
     }   
 })
 
 MINUS.addEventListener('click',()=>{
-    val = CANTIDAD.value
-   
-    if(CANTIDAD.value > 1){ 
-        CANTIDAD.value --
-    }
- 
+    if(cantidad.value > 1){ 
+        cantidad.value --
+    } 
 })
-
+  
+//Barra de Busqueda
 const SEARCH = document.querySelector("#search")
 
 SEARCH.addEventListener("input", e =>{
@@ -46,4 +45,21 @@ SEARCH.addEventListener("input", e =>{
         let isVisible = producto.name.toLowerCase().includes(value)
         cards[index].classList.toggle("hide",!isVisible)
     })
+})
+
+
+//agregar productos al caarrito
+let agregarProductos = document.querySelector("#agregarProducto")
+
+agregarProductos.addEventListener('click',()=>{
+    let val = cantidad.value
+    producto.cantidad = val
+
+    carrito.push(producto)
+
+    infoProducto.hide()
+
+    agregarProducto(carrito)
+
+
 })
