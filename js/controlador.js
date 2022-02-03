@@ -1,6 +1,7 @@
 import {llenarTienda,productos} from './llenarTienda.js'
 import {ampliarInfoProducto} from './ampliarInfoProducto.js'
 import {agregarProducto} from './agregarCarrito.js'
+import {buscar} from './buscarPRoducto.js'
 
 
 llenarTienda()
@@ -10,14 +11,12 @@ let producto={}
 let carrito=[]
 
 //Ampliar Informacion de producto
-let infoProducto = new bootstrap.Modal(document.getElementById('infoProducto'))
 
 let row  = document.querySelector("#row")
 
 row.addEventListener("click", e =>{
-    producto = ampliarInfoProducto(productos)
-    infoProducto.show()
-})
+    producto = ampliarInfoProducto(productos,e)
+})  
 
 //Funcionalidad input cantidad
 const PLUS = document.querySelector("#plus")
@@ -39,12 +38,9 @@ MINUS.addEventListener('click',()=>{
 //Barra de Busqueda
 const SEARCH = document.querySelector("#search")
 
+
 SEARCH.addEventListener("input", e =>{
-    let value = e.target.value.toLowerCase()
-    productos.forEach((producto,index)=>{
-        let isVisible = producto.name.toLowerCase().includes(value)
-        cards[index].classList.toggle("hide",!isVisible)
-    })
+    buscar(e,productos)
 })
 
 
