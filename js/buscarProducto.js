@@ -5,6 +5,6 @@ export function buscar(e,productos){
 
     productos.forEach((producto,index)=>{
         let isVisible = producto.name.toLowerCase().includes(value)
-        cards[index].classList.toggle("hide",!isVisible)
+        cards[index].classList.toggle("invisible",!isVisible)
     })
 }

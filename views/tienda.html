@@ -17,7 +17,7 @@
     <header class="border-bottom border-4 border-warning">
         <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
           <div class="container-fluid">
-            <a class="navbar-brand " href="../index.html"><i class="fab fa-stripe-s me-1"></i>hrek</a>
+            <a class="navbar-brand perra" href="../index.html"><i class="fab fa-stripe-s me-1"></i>hrek</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -46,8 +46,10 @@
                 </li>
               </ul>
               <div class="d-flex">
-               <a href="#"><i class="fa fa-shopping-cart text-white fs-3 mx-2"></i>
-                <span id="pildora" class="position-absolute top-10 start-10 translate-middle invisible">99+</span>
+               <a href="#" id ="infoCarrito"><i class="fa fa-shopping-cart text-white fa-2x"></i>
+                <span id="pildora" class="position-absolute translate-middle badge rounded-pill bg-danger invisible">
+
+                </span>
               </a>
               </div>
             </div>
@@ -55,10 +57,11 @@
         </nav>
       </header>
       <main>
-          <div class="container-fluid my-3 g-5">
+          <div class="container-fluid my-3 g-5" id="contain">
             <div class="">
               <h1 class="my-3 text-muted">Search Products</h1>
-              <input type="search" placeholder="Looking For..." class="form-control h-50 mb-3" id="search"></div>
+              <input type="search" placeholder="Looking For..." class="form-control h-50 mb-3" id="search">
+            </div>
               <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="row">
 
               </div>
@@ -90,7 +93,6 @@
                             <button type="button" class="btn btn-warning" id="plus">+</button>
                           </div>
                       </div>
-                        <h4 id="total"></h4>
                     </div> 
                   </div>
                 </div>
@@ -98,6 +100,28 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-success" id="agregarProducto"><i class="fa fa-shopping-cart me-2"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="modal" id ="modalCarrito"tabindex="-1">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Carrito</h5>
+               
+              </div>
+              <div class="modal-body">
+                <div class="container" id ="contenedorCarrito">
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="limpiador">Limpiar</button>
+                <button type="button" class="btn btn-success">Comprar</button>
               </div>
             </div>
           </div>

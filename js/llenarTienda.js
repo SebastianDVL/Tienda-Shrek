@@ -52,7 +52,7 @@ productos.forEach(producto => {
 
     let text = document.createElement('p')
     text.classList.add("card-text","text-muted")
-    text.textContent = producto.desc.slice(0,-30) + "..."
+    text.textContent = producto.desc.slice(0,-35) + "..."
 
     let price = document.createElement('h4')
     price.classList.add("fw-normal")
