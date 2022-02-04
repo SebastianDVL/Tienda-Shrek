@@ -12,13 +12,14 @@ llenarTienda()
 let producto={}
 let carrito=[]
 export let infoProducto = new bootstrap.Modal(document.getElementById('infoProducto'))
-
 //Ampliar Informacion de producto
 
 let row  = document.querySelector("#row")
 
 row.addEventListener("click", e =>{
-    producto = ampliarInfoProducto(productos,e)
+    producto = ampliarInfoProducto(e)
+    cantidad.value = 1
+    
 })  
 
 //Funcionalidad input cantidad

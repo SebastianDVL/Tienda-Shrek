@@ -1,3 +1,4 @@
+
 export function verCarrito(carrito){
     let modalCarrito = new bootstrap.Modal(document.getElementById('modalCarrito'))
 
@@ -48,6 +49,7 @@ export function verCarrito(carrito){
     limpiador.addEventListener('click',()=>{
         contenedor.parentNode.innerHTML = ""
         pildora.textContent = ""
+        contador= 0
     })
     modalCarrito.show()
 }
