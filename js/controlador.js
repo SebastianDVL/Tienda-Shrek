@@ -39,19 +39,11 @@ MINUS.addEventListener('click',()=>{
     } 
 })
 
-cantidad.addEventListener("input", e =>{
-    let value = e.target.value
-    if(value >10 || value < 1){
-        cantidad.classList.add("border-danger")
-    }else{
-        cantidad.classList.remove("border-danger")
-    }
-})
-  
 //Barra de Busqueda
 const SEARCH = document.querySelector("#search")
 
 SEARCH.addEventListener("input", e =>{
+
     buscar(e,productos)
 })
 
@@ -62,16 +54,12 @@ agregarProductos.addEventListener('click',()=>{
     let val = cantidad.value
     producto.cantidad = val
 
-    if(val< 1 || val >10){
-        alert("Cantidad Invalida")
-    }else{
+   
         carrito.push(producto)
 
         infoProducto.hide()
         
         agregarProducto(carrito)
-  
-    }
 })
 
 //Carrito

@@ -10,7 +10,7 @@ export function ampliarInfoProducto (event){
     let cards = document.querySelectorAll(".card")
     let n 
     for (let i = 0; i <= cards.length; i++) {
-        const element = cards[i];
+        const element = cards[i]
        if(event.target.parentNode == element  || event.target.parentNode.parentNode == element){
             n = i
        }    

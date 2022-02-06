@@ -18,6 +18,7 @@ export function verCarrito(carrito){
 
     let fotoProducto=document.createElement("img")
     fotoProducto.classList.add("img-fluid","w-100")
+    fotoProducto.style = "height: 10em"
     fotoProducto.src=producto.img
 
     let nombreProducto=document.createElement("h5")
@@ -27,7 +28,13 @@ export function verCarrito(carrito){
     precioProducto.textContent= producto.precio
 
     let cantidadProducto=document.createElement("h6")
-    cantidadProducto.textContent=producto.cantidad+" Und"
+    cantidadProducto.textContent=producto.cantidad + " Und"
+
+    let realNumber = producto.precio.slice(1).replace(".","")
+    console.log(realNumber)
+    
+    let subtotal = document.createElement("h6")
+    subtotal.textContent = "Subtotal: $" +Intl.NumberFormat("de-DE").format(realNumber * producto.cantidad)
 
     //Padres e hijos
     columna1.appendChild(fotoProducto)
@@ -35,21 +42,21 @@ export function verCarrito(carrito){
     columna2.appendChild(nombreProducto)
     columna2.appendChild(precioProducto)
     columna2.appendChild(cantidadProducto)
+    columna2.appendChild(subtotal)
 
     fila.appendChild(columna1)
     fila.appendChild(columna2)
 
     contenedor.appendChild(fila)
     })
-
-    let pildora = document.querySelector("#pildora")
+    modalCarrito.show()
+    /*let pildora = document.querySelector("#pildora")
 
     let limpiador = document.querySelector("#limpiador")
     
     limpiador.addEventListener('click',()=>{
         contenedor.parentNode.innerHTML = ""
         pildora.textContent = ""
-        contador= 0
-    })
-    modalCarrito.show()
+    })*/
+    
 }

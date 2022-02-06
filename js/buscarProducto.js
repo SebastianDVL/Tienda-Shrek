@@ -1,11 +1,24 @@
-export function buscar(e,productos){
+export function buscar(e){
     let cards = document.querySelectorAll(".card")
 
-    let value = e.target.value.toLowerCase()
+    let value = e.target.value.toLowerCase().replace(/ /g, "")
 
-    productos.forEach((producto,index)=>{
-        let isVisible = producto.name.toLowerCase().includes(value)
-        cards[index].classList.toggle("invisible",!isVisible)
+        cards.forEach((card)=>{
+            let title = card.lastChild.firstChild.textContent.replace(/ /g, "")
 
-    })
+            let isVisible = title.toLowerCase().includes(value)
+            
+            card.parentNode.classList.toggle("hide",!isVisible)
+        })
+
+        let noItems = document.querySelector("#noItems")
+
+        let hiddenElements = document.querySelectorAll(".hide")
+
+        if(hiddenElements.length == 20){
+            value = e.target.value
+            noItems.innerHTML= 'Sorry... :('+ "</br><hr>"    +'"' + value + '"' + ' did not match any product...'
+        }else{
+            noItems.innerHTML = ''
+        }
 }

@@ -13,7 +13,7 @@ html{
   }
 
 body{
-    background-color: rgb(218, 218, 218);
+    background-color: rgba(218,218,218);
     scroll-behavior: smooth;
 }
 
@@ -68,5 +68,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] { -moz-appearance:textfield; }
 
+
+.hide{
+    display: none;
+}
+
+#cantidad:hover{
+    cursor:default;
+}
+
+input:focus{
+    border:none;
+}
 
 

@@ -44,7 +44,7 @@ productos.forEach(producto => {
     img.style = "height: 13em" 
 
     let cardBody = document.createElement('div')
-    cardBody.classList.add("card-body","border-top","d-flex","flex-column")
+    cardBody.classList.add("card-body","d-flex","flex-column","justify-content-between","border-top")
 
     let title = document.createElement('h4')
     title.classList.add("card-title","text-warning","fw-bolder")

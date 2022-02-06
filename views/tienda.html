@@ -14,10 +14,10 @@
     <title>Shrek | Tienda</title>
 </head>
 <body>
-    <header class="border-bottom border-4 border-warning">
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
           <div class="container-fluid">
-            <a class="navbar-brand perra" href="../index.html"><i class="fab fa-stripe-s me-1"></i>hrek</a>
+            <a class="navbar-brand" href="../index.html"><i class="fab fa-stripe-s"></i>hrek</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -58,14 +58,15 @@
       </header>
       <main>
           <div class="container-fluid my-3 g-5" id="contain">
-            <div class="">
-              <h1 class="my-3 text-muted">Search Products</h1>
-              <input type="search" placeholder="Looking For..." class="form-control h-50 mb-3" id="search">
-            </div>
+            
+              <input type="search" placeholder="Looking For..." class="form-control my-3 shadow-none" id="search">
+           
               <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="row">
 
               </div>
-          </div>
+             
+          </div> 
+          <h3 class="text-muted my-5 position-absolute top-50 start-50 translate-middle text-center" id="noItems"></h3>
       </main>
       <section>
         <div class="modal fade" id="infoProducto">
@@ -78,7 +79,7 @@
                 <div class="container-fluid ">
                   <div class="row">
                     <div class="col-12 col-md-5">
-                        <img src="" alt="" class="img-fluid w-100" style="height: 16em" id="imgInfo">
+                        <img src="" alt="" class="img-fluid w-100" style="height: 14em" id="imgInfo">
                     </div>
                     <div class="col-12 col-md-7 d-flex flex-column justify-content-between border-start border-1"> 
     
@@ -87,7 +88,7 @@
 
                       <h4 id="price"></h4>
                        <div class="d-flex align-items-center">              
-                          <input type="number" class="form-control w-25 text-center" id="cantidad" value=1 min=1 max=6> 
+                          <input type="number" class="form-control w-25 text-center shadow-none" id="cantidad" value=1 min=1 max=6 readonly> 
                           <div class="btn-group mx-1">
                             <button type="button" class="btn btn-warning" id="minus">-</button>
                             <button type="button" class="btn btn-warning" id="plus">+</button>
@@ -111,7 +112,6 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title">Carrito</h5>
-               
               </div>
               <div class="modal-body">
                 <div class="container" id ="contenedorCarrito">
