@@ -36,7 +36,7 @@ productos.forEach(producto => {
     col.classList.add("col")
 
     let card = document.createElement('div')
-    card.classList.add("card","h-100", "border-0")
+    card.classList.add("card","h-100", "border-0","animate__animated","animate__fadeIn","wow")
 
     let img = document.createElement('img');
     img.src = producto.img
@@ -52,7 +52,7 @@ productos.forEach(producto => {
 
     let text = document.createElement('p')
     text.classList.add("card-text","text-muted")
-    text.textContent = producto.desc.slice(0,-35) + "..."
+    text.textContent = producto.desc.substring(0,15) + "..."
 
     let price = document.createElement('h4')
     price.classList.add("fw-normal")
