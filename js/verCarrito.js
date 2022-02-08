@@ -24,7 +24,7 @@ export function verCarrito(carrito){
     fotoProducto.style = "height: 13em"
     fotoProducto.src=producto.img
 
-    let nombreProducto=document.createElement("h3")
+    let nombreProducto=document.createElement("h4")
     nombreProducto.textContent=producto.desc
     nombreProducto.title = producto.nombre
 
@@ -58,7 +58,24 @@ export function verCarrito(carrito){
     })
 
     modalCarrito.show()
+     //cambiar de COP a USD  
+    let convert = document.querySelector("#convert")
 
+    convert.addEventListener("click",()=>{
+
+        if(convert.innerHTML== "Convert to USD"){
+            total *= 0.00025 ;
+        totalH3.innerHTML = "Total: $" + Intl.NumberFormat("en-US").format(total) + " USD"
+        convert.innerHTML ="Convert to COP"  
+        }
+        else{
+            total *= 4000 ;
+        totalH3.innerHTML = "Total: $" + Intl.NumberFormat("en-US").format(total) + " COP"
+        convert.innerHTML ="Convert to USD"  
+        }
+         
+        
+    })
     //calcular total
     
     let total = 0
@@ -68,7 +85,7 @@ export function verCarrito(carrito){
     })
 
     let totalH3 = document.querySelector("#total")
-    totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total)
+    totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total) + " COP"
 
     //Limpiar el carrito
 
@@ -82,5 +99,6 @@ export function verCarrito(carrito){
         totalH3.innerHTML = "Total: $0"
         carrito.length = 0
     })
-    
+
+   
 }

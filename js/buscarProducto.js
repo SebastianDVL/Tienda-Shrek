@@ -10,6 +10,8 @@ export function buscar(e){
             
         card.parentNode.classList.toggle("hide",!isVisible)
     })
+    
+    //En caso de no encontrar ningun producto...
 
     let noItems = document.querySelector("#noItems")
 
