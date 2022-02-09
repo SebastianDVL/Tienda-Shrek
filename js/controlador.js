@@ -18,8 +18,7 @@ let row  = document.querySelector("#row")
 
 row.addEventListener("click", e =>{
     producto = ampliarInfoProducto(e)
-    cantidad.value = 1
-    
+    cantidad.value = 1   
 })  
 
 //Funcionalidad input cantidad
