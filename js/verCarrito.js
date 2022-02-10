@@ -1,9 +1,9 @@
 
-export function verCarrito(carrito){
+export function verCarrito(carrito,h3){
     
-    let modalCarrito = new bootstrap.Modal(document.getElementById('modalCarrito'))
-
     let contenedor = document.querySelector("#contenedorCarrito")
+
+    
     contenedor.innerHTML = ""
     let subtotals = []
 
@@ -57,9 +57,10 @@ export function verCarrito(carrito){
     contenedor.appendChild(fila)
     })
 
-    modalCarrito.show()
+   
      //cambiar de COP a USD  
     let convert = document.querySelector("#convert")
+    convert.disabled =false
     convert.innerHTML = "Convert to USD"
     let bool = false
     convert.addEventListener("click",()=>{
@@ -98,6 +99,9 @@ export function verCarrito(carrito){
         pildora.innerHTML = ""
         totalH3.innerHTML = "Total: $0"
         carrito.length = 0
+        h3.innerHTML = '<i class="fa-solid fa-cart-arrow-down fs-1"></i>No Items Yet...'
+        total = 0
+        convert.disabled = true
     })
 
    

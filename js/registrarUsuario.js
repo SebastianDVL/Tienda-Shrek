@@ -6,21 +6,35 @@ let btnRegistro = document.querySelector("#registro")
 let email = document.querySelector("#email")
 let password = document.querySelector("#password")
 
-let span = document.querySelector("#invalid")
+let span = document.querySelector("#invalidEmail")
+let span2 = document.querySelector("#invalidPassword")
 
-mail.addEventListener("blur", e => {
+email.addEventListener("blur", e => {
     let val = e.target.value
     
     if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(val)) {
         span.innerHTML = "Correo Invalido!"    
         btnRegistro.disabled = true
+        email.classList.add("border-danger")
     }else{
         span.innerHTML = ""
         btnRegistro.disabled = false
+        email.classList.remove("border-danger")
+    }
+})
+password.addEventListener('blur', e => {
+    let val = e.target.value
+    if(!/^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8,}$/i.test(val) || val == ""){
+        span2.innerHTML = "Password must contain  At least 8 characters with at least 2 numericals"    
+        btnRegistro.disabled = true
+        password.classList.add("border-danger")
+    }else{
+        span2.innerHTML = ""
+        btnRegistro.disabled = false
+        password.classList.remove("border-danger")
     }
 })
 
-pasword.
 
 btnRegistro.addEventListener('click', e =>{
     e.preventDefault()

@@ -55,7 +55,7 @@ agregarProductos.addEventListener('click',()=>{
 
    
         carrito.push(producto)
-
+        
         infoProducto.hide()
         
         agregarProducto(carrito)
@@ -64,9 +64,16 @@ agregarProductos.addEventListener('click',()=>{
 //Carrito
 
 let infoCarrito = document.querySelector("#infoCarrito")
-
+let modalCarrito = new bootstrap.Modal(document.getElementById('modalCarrito'))
 infoCarrito.addEventListener('click',()=>{
-    verCarrito(carrito)
+    
+    let h3= document.querySelector("#noProduct")
+    if(carrito.length == 0){ 
+        h3.innerHTML = '<i class="fa-solid fa-cart-arrow-down fs-1"></i>No Items Yet...'
+   }else{
+    h3.innerHTML =""
+    verCarrito(carrito,h3)
+} modalCarrito.show()
 })
 
 

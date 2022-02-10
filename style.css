@@ -81,6 +81,10 @@ input:focus{
     border:none;
 }
 
+#contenedorCarrito{
+    height: 70vh;
+    overflow-y: scroll;
+}
 
 
 

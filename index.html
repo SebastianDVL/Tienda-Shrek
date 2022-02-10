@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+ 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="style.css">
   <title>Shrek</title>
@@ -77,7 +78,7 @@
         </div>
         
       </div>
-      <div class="offcanvas offcanvas-start bg-success text-white" tabindex="-1" id="offcanvasExample"
+      <div class="offcanvas offcanvas-start  text-success" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title text-warning fw-bolder" id="offcanvasExampleLabel">Do you want to be part of this?
@@ -88,11 +89,11 @@
         <div class="offcanvas-body">
           <div class="container">
             <img src="img/doshrek.jpg" alt="shrek n' Fiona" class="img-fluid w-100 mb-4">
-            <form class="text-warning">
+            <form class="text-success">
               <div class="mb-3">
                 <label for="InputEmail1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email">
-                <span id="invalid" class="text-danger"></span>
+                <span id="invalidEmail" class="text-danger fst-italic"></span>
               </div>
               <!--<div class="mb-3">
                 <label for="InputUsername" class="form-label">Username</label>
@@ -105,6 +106,7 @@
               <div class="mb-3">
                 <label for="InputPassword1" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password">
+                <span id="invalidPassword" class="text-danger fst-italic"></span>
               </div>
               <!--<div class="mb-3">
                 <label for="InputPassword2" class="form-label">Confirm Password</label>
@@ -115,7 +117,7 @@
                 <label class="form-check-label" for="leCheck1"><a href="#" class="text-warning">Terms And
                     Conditions</a></label>
               </div>-->
-              <button type="submit" class="btn btn-warning text-white" id="registro" >Submit</button>
+              <button type="submit" class="btn btn-warning text-white" id="registro" disabled  >Submit</button>
             </form>
           </div>
 
