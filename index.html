@@ -16,7 +16,7 @@
   <title>Shrek</title>
 </head>
 
-<body class="fondo text-white">
+<body class="fondo">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
       <div class="container-fluid">
@@ -31,21 +31,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-               More...
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="views/tienda.html">Shop</a></li>
-                <li><a class="dropdown-item" href="#">Characters</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">About Me</a></li>
-              </ul>
+              <a class="nav-link" href="views/tienda.html">Shop</a>
             </li>
           </ul>
          
@@ -66,7 +52,7 @@
           <div class="col-12 col-lg-4">
             <img src="img/shrek.png" alt="Shrek" class="img-fluid w-100">
           </div>
-          <div class="col-12 col-lg-8 text-white d-flex flex-column justify-content-between">
+          <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
             <h2>Shrek Is Love, Shrek Is Life</h2>
             <p><strong>Living…</strong> alone in a swamp, deep in a mystical forest. Shrek basks in his daily habits and rituals, including bathing in mud, eating grubs, and ear-wax-candle-lit dinners. He loves seclusion, and when humans come to bother him, he quickly fizzles their posse with a classic ogre threat – though Shrek is not one to actually act on his ferocity. Shrek simply puts on the front of mean, green eating machine so he’ll be left alone, while in fact being rather peaceful despite his size and appearance. “Ogres are like onions,” says Shrek. “Onion haves layers. Ogres have layers. You get it? We both have layers.” We got it, Shrek.... </p>
             <p><strong>Personality…</strong>… clever, self-sufficient, disgusting, and proud of it. Shrek also has a strong sense of right and wrong, and although he usually puts himself before anyone else, he repeatedly saves Donkey and comes to his aid. Shrek likes to bluster that he only cares about himself and his beloved peace and quiet, but this ogre has a heart as big as his swamp.</p>
@@ -89,6 +75,16 @@
         <div class="offcanvas-body">
           <div class="container">
             <img src="img/doshrek.jpg" alt="shrek n' Fiona" class="img-fluid w-100 mb-4">
+            
+              <ul class="nav nav-tabs" id="navForm">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Sign in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-dark" href="#">Log in</a>
+                </li>
+              </ul>
+            
             <form class="text-success">
               <div class="mb-3">
                 <label for="InputEmail1" class="form-label">Email address</label>
@@ -117,8 +113,14 @@
                 <label class="form-check-label" for="leCheck1"><a href="#" class="text-warning">Terms And
                     Conditions</a></label>
               </div>-->
-              <button type="submit" class="btn btn-warning text-white" id="registro" disabled  >Submit</button>
+              <button type="submit" class="btn btn-warning text-white" id="registro" disabled>Sign in</button>
+              <button type="submit" class="btn btn-warning text-white hide" id="ingreso" disabled>Log in</button>
             </form>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body mt-3 text-center">
+                <i class="fa-solid fa-check"></i>Registrado Correctamente
+              </div>
+            </div>
           </div>
 
         </div>
@@ -130,13 +132,13 @@
 
     <section>
       <div class="container my-4">
-        <div class="row row-cols-1 row-cols-md-2 text-white">
+        <div class="row row-cols-1 row-cols-md-2">
           <div class="col">
             <p>In the beginning Shrek created heaven, and earth.
               2 And the earth was void and empty, and
               darkness was upon the face of the deep; and the
               spirit of Shrek moved over the waters.
-              3 And Shrek said: Be light made. And lightx|
+              3 And Shrek said: Be light made. And light
               was made.
               4 And Shrek saw the light that it was good; and
               he divided the light from the darkness.
