@@ -15,34 +15,30 @@
     <title>Shrek | Tienda</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html"><i class="fab fa-stripe-s"></i>hrek</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Shop</a>
-                </li>
-              </ul>
-              <div class="d-flex">
-               <a href="#" id ="infoCarrito"><i class="fa fa-shopping-cart text-white fa-2x"></i>
-                <span id="pildora" class="position-absolute translate-middle badge rounded-pill bg-danger invisible">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container-fluid d-flex flex-row justify-content-between">
+        <span class="text-white fs-3"><i class="fab fa-stripe-s"></i>hrek</span>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Shop</a>
+            </li>
+          </ul>
+            <div class="d-flex">
+        <a href="#" id ="infoCarrito"><i class="fa fa-shopping-cart text-white fa-2x"></i>
+         <span id="pildora" class="position-absolute translate-middle badge rounded-pill bg-danger invisible">
 
-                </span>
-              </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
+         </span>
+       </a>
+       </div>
+  
+      </div>
+    </nav>
+  </header>
+   
       <main>
           <div class="container-fluid my-3 g-5" id="contain">
             
@@ -65,17 +61,17 @@
               <div class="modal-body ">     
                 <div class="container-fluid ">
                   <div class="row">
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-6">
                         <img src="" alt="" class="img-fluid w-100" style="height: 14em" id="imgInfo">
                     </div>
-                    <div class="col-12 col-md-7 d-flex flex-column justify-content-between border-start border-1"> 
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-between border-start border-1"> 
     
                       <h4 id="title"></h4>
                       <p id="text"></p>
 
                       <h4 id="price"></h4>
                        <div class="d-flex align-items-center">              
-                          <input type="number" class="form-control w-25 text-center shadow-none" id="cantidad" value=1 min=1 max=6 readonly> 
+                          <input type="number" class="form-control w-25 text-center shadow-none" id="cantidad" value=1 readonly> 
                           <div class="btn-group mx-1">
                             <button type="button" class="btn btn-warning" id="minus">-</button>
                             <button type="button" class="btn btn-warning" id="plus">+</button>

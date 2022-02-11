@@ -23,7 +23,7 @@ export function ampliarInfoProducto (event){
             nombre:event.target.parentElement.querySelector("h4").textContent,
             precio:event.target.parentElement.querySelector(".fw-normal").textContent,
             desc:d,
-            cantidad:document.querySelector("#cantidad").value
+          
         }
         
 
@@ -42,7 +42,7 @@ export function ampliarInfoProducto (event){
             nombre:event.target.parentElement.querySelector("h4").textContent,
             precio:event.target.parentElement.querySelector(".fw-normal").textContent,
             desc:d,
-            cantidad:document.querySelector("#cantidad").value
+        
         }
        
         imgInfo.src = producto.img

@@ -31,7 +31,6 @@ PLUS.addEventListener('click',()=>{
         cantidad.value ++
     }   
 })
-
 MINUS.addEventListener('click',()=>{
     if(cantidad.value > 1){ 
         cantidad.value --
@@ -43,7 +42,7 @@ const SEARCH = document.querySelector("#search")
 
 SEARCH.addEventListener("input", e =>{
 
-    buscar(e,productos)
+    buscar(e)
 })
 
 //agregar productos al caarrito
@@ -75,6 +74,8 @@ infoCarrito.addEventListener('click',()=>{
     verCarrito(carrito,h3)
 } modalCarrito.show()
 })
+
+
 
 
 

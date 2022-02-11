@@ -23,4 +23,4 @@ export function buscar(e){
     }else{
         noItems.innerHTML = ''
     }
-}
+}   

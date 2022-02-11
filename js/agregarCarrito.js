@@ -8,5 +8,6 @@ export function agregarProducto(carrito){
     carrito.forEach(producto => {
         contador += Number(producto.cantidad)
     })
+    
     pildora.textContent = contador
 }

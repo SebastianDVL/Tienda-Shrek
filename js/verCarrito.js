@@ -9,52 +9,53 @@ export function verCarrito(carrito,h3){
 
     carrito.forEach(producto => {    
     
-    let fila=document.createElement("div")
-    fila.classList.add("row","p-4","border-top")
-    
+        let fila=document.createElement("div")
+        fila.classList.add("row","p-4","border-top","border-bottom")
+        
 
-    let columna1=document.createElement("div")
-    columna1.classList.add("col-12","col-md-4")
+        let columna1=document.createElement("div")
+        columna1.classList.add("col-12","col-md-4")
 
-    let columna2=document.createElement("div")
-    columna2.classList.add("col-12","col-md-8","d-flex","flex-column","justify-content-between")
+        let columna2=document.createElement("div")
+        columna2.classList.add("col-12","col-md-8","d-flex","flex-column","justify-content-between")
 
-    let fotoProducto=document.createElement("img")
-    fotoProducto.classList.add("img-fluid","w-100")
-    fotoProducto.style = "height: 13em"
-    fotoProducto.src=producto.img
+        let fotoProducto=document.createElement("img")
+        fotoProducto.classList.add("img-fluid","w-100")
+        fotoProducto.style = "height: 13em"
+        fotoProducto.src=producto.img
 
-    let nombreProducto=document.createElement("h4")
-    nombreProducto.textContent=producto.desc
-    nombreProducto.title = producto.nombre
+        let nombreProducto=document.createElement("h4")
+        nombreProducto.textContent=producto.desc
+        nombreProducto.title = producto.nombre
+        nombreProducto.classList.add("fw-bold")
 
-    let precioProducto=document.createElement("h3")
-    precioProducto.textContent= producto.precio
-    precioProducto.classList.add("text-muted")
+        let precioProducto=document.createElement("h3")
+        precioProducto.textContent= producto.precio
 
-    let cantidadProducto=document.createElement("h5")
-    cantidadProducto.textContent="Cantidad: " + producto.cantidad
-    cantidadProducto.classList.add("text-muted")
 
-    let realNumber = producto.precio.slice(1).replace(".","")
-    let subtotalValue = realNumber * producto.cantidad 
-    let subtotal = document.createElement("h5")
-    subtotal.classList.add("text-muted")
-    subtotal.textContent = "Subtotal: $" +Intl.NumberFormat("de-DE").format(subtotalValue)
+        let cantidadProducto=document.createElement("h5")
+        cantidadProducto.textContent="Cantidad: " + producto.cantidad
+        cantidadProducto.classList.add("text-muted")
 
-    subtotals.push(subtotalValue)
-    //Padres e hijos
-    columna1.appendChild(fotoProducto)
+        let realNumber = producto.precio.slice(1).replace(".","")
+        let subtotalValue = realNumber * producto.cantidad 
+        let subtotal = document.createElement("h5")
 
-    columna2.appendChild(nombreProducto)
-    columna2.appendChild(precioProducto)
-    columna2.appendChild(cantidadProducto)
-    columna2.appendChild(subtotal)
+        subtotal.classList.add("text-muted")
+        subtotal.textContent = "Subtotal: $" +Intl.NumberFormat("de-DE").format(subtotalValue)
 
-    fila.appendChild(columna1)
-    fila.appendChild(columna2)
+        subtotals.push(subtotalValue)
+        //Padres e hijos
+        columna1.appendChild(fotoProducto)
 
-    contenedor.appendChild(fila)
+        columna2.appendChild(nombreProducto)
+        columna2.appendChild(precioProducto)
+        columna2.appendChild(cantidadProducto)
+        columna2.appendChild(subtotal)
+
+        fila.appendChild(columna1)
+        fila.appendChild(columna2)
+        contenedor.appendChild(fila)
     })
 
    
