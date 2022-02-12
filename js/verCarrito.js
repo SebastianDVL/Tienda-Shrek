@@ -80,11 +80,11 @@ export function verCarrito(carrito,h3){
     })
     //calcular total
     
-    let total = 0
+    let total = subtotals.reduce((currentTotal,subtotal) =>{
+        return subtotal + currentTotal
+    },0)
 
-    subtotals.forEach(subtotal =>{
-        total += subtotal
-    })
+    
 
     let totalH3 = document.querySelector("#total")
     totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total) + " COP"

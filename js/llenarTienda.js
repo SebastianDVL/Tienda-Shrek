@@ -36,7 +36,7 @@ productos.forEach(producto => {
     col.classList.add("col")
 
     let card = document.createElement('div')
-    card.classList.add("card","h-100", "border-0","animate__animated","animate__fadeIn","wow")
+    card.classList.add("card","h-100", "border-0")
 
     let img = document.createElement('img');
     img.src = producto.img

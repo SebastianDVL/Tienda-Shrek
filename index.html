@@ -44,10 +44,10 @@
     <section>
       <div class="container-fluid mt-3 animate__animated animate__fadeInUpBig p-5 wow">
         <div class="row">
-          <div class="col-md-12 col-lg-4">
-            <img src="img/shrek.png" alt="Shrek" class="img-fluid w-100 my-300">
+          <div class="col-12 col-md-6 col-lg-4">
+            <img src="img/shrek.png" alt="Shrek" class="img-fluid w-100 mb-3 h-100">
           </div>
-          <div class="col-md-12 col-lg-8 d-flex flex-column justify-content-between fst-italic">
+          <div class="col-12 col-md-6 col-lg-8 d-flex flex-column justify-content-between fst-italic">
             <h2>Shrek Is Love, Shrek Is Life</h2>
             <p><strong>Living…</strong> alone in a swamp, deep in a mystical forest. Shrek basks in his daily habits and rituals, including bathing in mud, eating grubs, and ear-wax-candle-lit dinners. He loves seclusion, and when humans come to bother him, he quickly fizzles their posse with a classic ogre threat – though Shrek is not one to actually act on his ferocity. Shrek simply puts on the front of mean, green eating machine so he’ll be left alone, while in fact being rather peaceful despite his size and appearance. “Ogres are like onions,” says Shrek. “Onion haves layers. Ogres have layers. You get it? We both have layers.” We got it, Shrek.... </p>
             <p><strong>Personality…</strong>… clever, self-sufficient, disgusting, and proud of it. Shrek also has a strong sense of right and wrong, and although he usually puts himself before anyone else, he repeatedly saves Donkey and comes to his aid. Shrek likes to bluster that he only cares about himself and his beloved peace and quiet, but this ogre has a heart as big as his swamp.</p>
@@ -62,7 +62,7 @@
       <div class="offcanvas offcanvas-start text-success" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title text-warning fw-bolder" id="offcanvasExampleLabel">Do you want to be part of this?
+          <h5 class="offcanvas-title text-warning fw-bolder" id="offcanvasExampleLabel">Do you want to be part of this family?
           </h5>
           <button type="button" class="btn-close btn-warning text-reset" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
@@ -71,19 +71,19 @@
           <div class="container ">
             <img src="img/doshrek.jpg" alt="shrek n' Fiona" class="img-fluid w-100 mb-4">
             
-              <ul class="nav nav-tabs" id="navForm">
-                <li class="nav-item bg-light">
-                  <a class="nav-link active " aria-current="page" href="#">Sign in</a>
+              <ul class="nav nav-tabs w-auto" id="navForm">
+                <li class="nav-item">
+                  <a class="nav-link link-dark active " aria-current="page">Sign in</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link link-dark" href="#">Log in</a>
+                  <a class="nav-link link-dark">Log in</a>
                 </li>
               </ul>
             
-            <form class="text-success">
+            <form class="text-success my-4">
               <div class="mb-3">
                 <label for="InputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" autocomplete>
                 <span id="invalidEmail" class="text-danger fst-italic"></span>
               </div>
               <!--<div class="mb-3">
@@ -96,7 +96,7 @@
               </div>-->
               <div class="mb-3">
                 <label for="InputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control" id="password" autocomplete>
                 <span id="invalidPassword" class="text-danger fst-italic"></span>
               </div>
               <!--<div class="mb-3">
@@ -109,11 +109,11 @@
                     Conditions</a></label>
               </div>-->
               <button type="submit" class="btn btn-warning text-white" id="registro" disabled>Sign in</button>
-              <button type="submit" class="btn btn-warning text-white hide" id="ingreso" disabled>Log in</button>
+              <button type="submit" class="btn btn-warning text-white hide" id="ingreso">Log in</button>
             </form>
             <div class="collapse" id="collapseExample">
-              <div class="card card-body mt-3 text-center">
-                <i class="fa-solid fa-check"></i>Registrado Correctamente
+              <div class="card card-body text-center">
+             
               </div>
             </div>
           </div>
@@ -273,24 +273,14 @@
       </div>
     </section>
   </main>
-  <footer class="bg-success mt-5 p-3 text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4 text-center d-flex flex-column text-white">
-         <a href="https://www.facebook.com/shrekparasiempre" class="btn btn-warning m-2" target="_blank"> <i class="fa fa-facebook mx-2"></i>shrekparasiempre</a>
-         <a href="https://twitter.com/ShrekHistory" class="btn btn-warning m-2" target="_blank"> <i class="fa fa-twitter mx-2"></i>ShrekHistory</a>
-         <a href="https://www.instagram.com/officiallyshrek/?hl=es" class="btn btn-warning m-2" target="_blank"> <i class="fa fa-instagram mx-2"></i>officiallyshrek</a>
-        </div>
-        <div class="col-12 col-md-4 text-center">
-          <p>Sebastian Lopez Perez &copy; 2021</p>  
-        </div>
-        <div class="col-12 col-md-4 text-center">
-          <p>Sebastian Lopez Perez &copy; 2021</p>
-          <p>GitHub</p>
-          <p>Sorry, i dont have social media :(</p>
-        </div>
-      </div>
-    </div>
+  <footer class="bg-success mt-5 p-5 text-center">
+   
+      
+        <a href="https://www.facebook.com/shrekparasiempre"><span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-facebook-square"></i></span></a>
+        <a href="https://twitter.com/ShrekHistory"><span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-twitter"></i></span></a>
+        <a href="https://www.instagram.com/officiallyshrek/?hl=es"><span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-instagram"></i></span></a>
+  
+   
   </footer>
   <script src="js/firebase.js" type="module"></script>
   <script src="wow.min.js"> </script>
@@ -305,3 +295,4 @@
 </body>
 
 </html>
+

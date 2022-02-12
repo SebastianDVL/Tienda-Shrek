@@ -1,48 +1,39 @@
 import{ getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"
+import {validateForm} from "./validate.js"
+
+let btnIngreso = document.querySelector("#ingreso")
+let btnRegistro = document.querySelector("#registro")
+
+//toglear entre registrar o ingresar
+const nav = document.querySelector("#navForm")
+
+nav.addEventListener("click",e =>{
+    e.preventDefault();
+
+    let target = e.target
+    if(target != nav){
+        if(target == nav.children[0].children[0]){
+            btnRegistro.classList.remove("hide")
+            btnIngreso.classList.add("hide")
+            target.classList.add("active")
+            target.parentNode.nextElementSibling.children[0].classList.remove("active")  
+         }else{
+            target.classList.add("active")
+            target.parentNode.previousElementSibling.children[0].classList.remove("active")
+            btnRegistro.classList.add("hide")
+            btnIngreso.classList.remove("hide")
+            
+        } 
+    }  
+})
+
 
 //Validacion de formulario en tiempo real
-let email = document.querySelector("#email")
-let password = document.querySelector("#password")
+validateForm(btnRegistro)
+validateForm(btnIngreso)
 
-let span = document.querySelector("#invalidEmail")
-let span2 = document.querySelector("#invalidPassword")
 
-email.addEventListener("blur", e => {
-    let val = e.target.value
-    
-    if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(val)) {
-        span.innerHTML = "Correo Invalido!"    
-        btnRegistro.disabled = true
-        email.classList.add("border-danger")
-       
-    }else if(password.value == ""){
-        span.innerHTML = ""
-        email.classList.remove("border-danger")
-        btnRegistro.disabled = true
-    }else{
-        span.innerHTML = ""
-        email.classList.remove("border-danger")
-        btnRegistro.disabled = false
-    }
-})
-password.addEventListener('blur', e => {
-    let val = e.target.value
-    if(!/^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8,}$/i.test(val)){
-        span2.innerHTML = "Password must contain at least 8 characters with at least 2 numericals"    
-        btnRegistro.disabled = true
-        password.classList.add("border-danger")
-    }else if(email.value == ""){
-        span2.innerHTML = ""
-        password.classList.remove("border-danger")
-        btnRegistro.disabled = true
-    }else{
-        span2.innerHTML = ""
-        password.classList.remove("border-danger")
-        btnRegistro.disabled = false
-    }
-})
-
-let btnRegistro = document.querySelector("#registro")
+//Registro 
 
 
 btnRegistro.addEventListener('click', e =>{
@@ -51,40 +42,28 @@ btnRegistro.addEventListener('click', e =>{
     let emailVal = email.value
     let passwordVal = password.value
 
-
-   
-
     //agregar la rutina para llevar los datos a firebase
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, emailVal, passwordVal)
     .then((userCredential) => {
         const user = userCredential.user;
-        email.value = ""
-        password.value = ""
+        clear()
         btnRegistro.disabled = true
-        var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-        var collapseList = collapseElementList.map(function (collapseEl) {
-            return new bootstrap.Collapse(collapseEl)
-        })
-
-        setTimeout(esperar,3000)
-
-        function esperar(){
-            var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-            var collapseList = collapseElementList.map(function (collapseEl) {
-                return new bootstrap.Collapse(collapseEl)
-            })
-        }
+        
+    
+        toggleCollapse('<i class="fa-solid fa-check"></i>Registrado Correctamente',"text-danger","text-success")
     })
 
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+    
+        toggleCollapse(`Error: ${errorCode} : ${errorMessage}`,"text-success","text-danger")
     });
 })
 
+//ingreso
 
-let btnIngreso = document.querySelector("#ingreso")
 
 btnIngreso.addEventListener('click', e =>{
     e.preventDefault()
@@ -97,10 +76,42 @@ btnIngreso.addEventListener('click', e =>{
     signInWithEmailAndPassword(auth,emailVal,passwordVal)
     .then((userCredential)=>{
         const user = userCredential
+        clear()
 
+        toggleCollapse('<i class="fa-solid fa-check"></i>Haz Inicioado Sesion Correctamente',"text-danger","text-success")
 
     }).catch((error)=>{
         const errorCode = error.code;
         const errorMessage = error.message
+
+        toggleCollapse(`Error: ${errorCode} : ${errorMessage}`,"text-success","text-danger")
     })
+
 })
+
+//funcion de aparecer y desaparecer Collapse 
+
+function toggleCollapse(msg,colorToRemove,colorToSet){
+        var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+
+        collapseElementList.forEach(ce=>{
+            
+        ce.classList.remove(colorToRemove)
+        ce.classList.add(colorToSet)
+        ce.children[0].innerHTML= msg
+        })
+
+        function collapseElement(){
+            collapseElementList.map(function (collapseEl) {
+                return new bootstrap.Collapse(collapseEl)
+            })
+        }
+        collapseElement()
+
+        setTimeout(collapseElement,3000)
+ }
+
+ function clear(){
+    email.value = ""
+    password.value = ""
+}
