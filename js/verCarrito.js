@@ -61,19 +61,25 @@ export function verCarrito(carrito,h3){
    
      //cambiar de COP a USD  
     let convert = document.querySelector("#convert")
-    convert.disabled =false
+
+    if(carrito.length > 0){
+        convert.disabled = false
+    }
+
     convert.innerHTML = "Convert to USD"
+
     let bool = false
+
     convert.addEventListener("click",()=>{
         bool = !bool
         if(bool){
             total *= 0.00025 ;
-        totalH3.innerHTML = "Total: $" + Intl.NumberFormat("en-US").format(total) + " USD"
-        convert.innerHTML ="Convert to COP"  
+            totalH3.innerHTML = "Total: $" + Intl.NumberFormat("en-US").format(total) + " USD"
+            convert.innerHTML ="Convert to COP"  
         }else{
             total *= 4000 ;
-        totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total) + " COP"
-        convert.innerHTML ="Convert to USD"  
+            totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total) + " COP"
+            convert.innerHTML ="Convert to USD"  
         }
          
         

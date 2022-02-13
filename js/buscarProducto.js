@@ -18,7 +18,6 @@ export function buscar(e){
     let hiddenElements = document.querySelectorAll(".hide")
 
     if(hiddenElements.length == 20){
-        value = e.target.value
         noItems.innerHTML= 'Sorry... :('+ "</br><hr>"    +'"' + value + '"' + ' did not match any product...'
     }else{
         noItems.innerHTML = ''

@@ -1,4 +1,4 @@
-import {llenarTienda,productos} from './llenarTienda.js'
+import {llenarTienda} from './llenarTienda.js'
 import {ampliarInfoProducto} from './ampliarInfoProducto.js'
 import {agregarProducto} from './agregarCarrito.js'
 import {buscar} from './buscarPRoducto.js'

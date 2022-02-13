@@ -28,10 +28,10 @@ btnRegistro.addEventListener('click', e =>{
         toggleCollapse('<i class="fa-solid fa-check"></i>Registrado Correctamente',"text-danger","text-success")
     })
     .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        const errorCode = error.code.substring(5).replaceAll("-"," ");
+     
     
-        toggleCollapse(`Error: ${errorCode} : ${errorMessage}`,"text-success","text-danger")
+        toggleCollapse(`<i class="fa-solid fa-user-xmark me-1"></i>${errorCode}`,"text-success","text-danger")
     });
 })
 
@@ -53,10 +53,10 @@ btnIngreso.addEventListener('click', e =>{
         toggleCollapse('<i class="fa-solid fa-check"></i>Haz Inicioado Sesion Correctamente',"text-danger","text-success")
 
     }).catch((error)=>{
-        const errorCode = error.code;
-        const errorMessage = error.message
+        const errorCode = error.code.substring(5).replaceAll("-"," ");
+        
 
-        toggleCollapse(`Error: ${errorCode} : ${errorMessage}`,"text-success","text-danger")
+        toggleCollapse(`<i class="fa-solid fa-circle-exclamation"></i>${errorCode}`,"text-success","text-danger")
     })
 
 })
