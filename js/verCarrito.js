@@ -10,14 +10,14 @@ export function verCarrito(carrito,h3){
     carrito.forEach(producto => {    
     
         let fila=document.createElement("div")
-        fila.classList.add("row","p-4","border-top","border-bottom")
+        fila.classList.add("row","border-top","border-bottom")
         
 
         let columna1=document.createElement("div")
-        columna1.classList.add("col-12","col-md-4")
+        columna1.classList.add("col-12","col-md-4","border-end","p-3")
 
         let columna2=document.createElement("div")
-        columna2.classList.add("col-12","col-md-8","d-flex","flex-column","justify-content-between")
+        columna2.classList.add("col-12","col-md-8","d-flex","flex-column","justify-content-between","p-3")
 
         let fotoProducto=document.createElement("img")
         fotoProducto.classList.add("img-fluid","w-100")
@@ -89,13 +89,28 @@ export function verCarrito(carrito,h3){
     let totalH3 = document.querySelector("#total")
     totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total) + " COP"
 
-    //Limpiar el carrito
+    //Limpiar el carrito con boton
 
     let pildora = document.querySelector("#pildora")
 
     let limpiador = document.querySelector("#limpiador")
 
-    limpiador.addEventListener('click',()=>{
+    limpiador.addEventListener('click',e => { 
+    e.stopPropagation()
+      limpiarCarrito()
+     })
+     //comprar los productos del carrito
+    let comprar = document.querySelector("#comprar")
+    let toast = new bootstrap.Toast(document.querySelector("#toast"))
+    comprar.addEventListener('click',(e) =>{
+        if(carrito.length > 0 ){
+            limpiarCarrito()
+            toast.show()
+        }
+    })
+
+        //Funcion de limpiar carrito
+    function limpiarCarrito(){
         contenedor.innerHTML = ""
         pildora.innerHTML = ""
         totalH3.innerHTML = "Total: $0"
@@ -103,7 +118,6 @@ export function verCarrito(carrito,h3){
         h3.innerHTML = '<i class="fa-solid fa-cart-arrow-down fs-1"></i>No Items Yet...'
         total = 0
         convert.disabled = true
-    })
-
-   
+    }
+ 
 }

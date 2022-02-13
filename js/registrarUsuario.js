@@ -1,40 +1,16 @@
 import{ getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"
 import {validateForm} from "./validate.js"
 
+
 let btnIngreso = document.querySelector("#ingreso")
 let btnRegistro = document.querySelector("#registro")
 
-//toglear entre registrar o ingresar
-const nav = document.querySelector("#navForm")
-
-nav.addEventListener("click",e =>{
-    e.preventDefault();
-
-    let target = e.target
-    if(target != nav){
-        if(target == nav.children[0].children[0]){
-            btnRegistro.classList.remove("hide")
-            btnIngreso.classList.add("hide")
-            target.classList.add("active")
-            target.parentNode.nextElementSibling.children[0].classList.remove("active")  
-         }else{
-            target.classList.add("active")
-            target.parentNode.previousElementSibling.children[0].classList.remove("active")
-            btnRegistro.classList.add("hide")
-            btnIngreso.classList.remove("hide")
-            
-        } 
-    }  
-})
-
-
 //Validacion de formulario en tiempo real
-validateForm(btnRegistro)
-validateForm(btnIngreso)
+
+validateForm()
 
 
 //Registro 
-
 
 btnRegistro.addEventListener('click', e =>{
     e.preventDefault()
@@ -49,11 +25,8 @@ btnRegistro.addEventListener('click', e =>{
         const user = userCredential.user;
         clear()
         btnRegistro.disabled = true
-        
-    
         toggleCollapse('<i class="fa-solid fa-check"></i>Registrado Correctamente',"text-danger","text-success")
     })
-
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -67,7 +40,6 @@ btnRegistro.addEventListener('click', e =>{
 
 btnIngreso.addEventListener('click', e =>{
     e.preventDefault()
-
     let emailVal = email.value
     let passwordVal = password.value
 

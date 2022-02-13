@@ -81,6 +81,15 @@ input:focus{
 #navForm  li a{
     cursor: pointer;
 }
+#invalidPassword,#invalidEmail{font-size: 0.8em;}
+
+footer > .container-fluid{
+    background-color: rgb(22, 71, 2) !important;
+}
+
+.fluid{
+    height: 10em;
+}
 
 
 

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
- 
+  <link rel="icon" href="./img//shrekicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="style.css">
   <title>Shrek</title>
@@ -36,12 +36,12 @@
   </header>
   <main>
     <section>
-     <div class="container-fluid banner d-flex flex-column justify-content-end">
+     <div class="container-fluid banner">
     
     </div>
     </section>
 
-    <section>
+    <section id="signin">
       <div class="container-fluid mt-3 animate__animated animate__fadeInUpBig p-5 wow">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4">
@@ -51,7 +51,7 @@
             <h2>Shrek Is Love, Shrek Is Life</h2>
             <p><strong>Living…</strong> alone in a swamp, deep in a mystical forest. Shrek basks in his daily habits and rituals, including bathing in mud, eating grubs, and ear-wax-candle-lit dinners. He loves seclusion, and when humans come to bother him, he quickly fizzles their posse with a classic ogre threat – though Shrek is not one to actually act on his ferocity. Shrek simply puts on the front of mean, green eating machine so he’ll be left alone, while in fact being rather peaceful despite his size and appearance. “Ogres are like onions,” says Shrek. “Onion haves layers. Ogres have layers. You get it? We both have layers.” We got it, Shrek.... </p>
             <p><strong>Personality…</strong>… clever, self-sufficient, disgusting, and proud of it. Shrek also has a strong sense of right and wrong, and although he usually puts himself before anyone else, he repeatedly saves Donkey and comes to his aid. Shrek likes to bluster that he only cares about himself and his beloved peace and quiet, but this ogre has a heart as big as his swamp.</p>
-            <button class="btn btn-warning w-25" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            <button class="btn btn-warning w-50" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
               aria-controls="offcanvasExample">
               <i class="fas fa-sign-in-alt me-2"></i> Sign In
             </button>
@@ -61,14 +61,14 @@
       </div>
       <div class="offcanvas offcanvas-start text-success" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
+        <div class="offcanvas-header bg-success">
           <h5 class="offcanvas-title text-warning fw-bolder" id="offcanvasExampleLabel">Do you want to be part of this family?
           </h5>
           <button type="button" class="btn-close btn-warning text-reset" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <div class="container ">
+          <div class="container-fluid ">
             <img src="img/doshrek.jpg" alt="shrek n' Fiona" class="img-fluid w-100 mb-4">
             
               <ul class="nav nav-tabs w-auto" id="navForm">
@@ -120,7 +120,7 @@
 
         </div>
     </section>
-    <section class="fondobanner">
+    <section class="fondobanner" id="fondobanner">
 
     </section>
 
@@ -273,14 +273,63 @@
       </div>
     </section>
   </main>
-  <footer class="bg-success mt-5 p-5 text-center">
-   
-      
-        <a href="https://www.facebook.com/shrekparasiempre"><span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-facebook-square"></i></span></a>
-        <a href="https://twitter.com/ShrekHistory"><span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-twitter"></i></span></a>
-        <a href="https://www.instagram.com/officiallyshrek/?hl=es"><span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-instagram"></i></span></a>
-  
-   
+  <footer>
+    <div class="container-fluid text-white p-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mx-5 g-5 h-75">
+        <div class="col d-flex flex-column"> 
+          <h2 class="text-warning">Shrek.com</h2><small class="text-muted">By Sebastian Lopez</small>
+            <a href="https://github.com/SebastianDVL" class="text-muted my-4" target="_blank"><i class="fa-brands fa-github me-2"></i>Github | SebastianDVL</a>
+            <p>Hi im Sebastian! I'm a Full Stack Software Developer working for GLOBANT, I have 0 years of experience and this is my first project.</p>
+        </div>
+        <div class="col d-flex flex-column text-center">
+            <p>Quick Links</p> 
+            <a class="link-info" href="index.html">Home</a>
+            <a class="link-info my-3" href="./views/tienda.html">Shopping</a> 
+            <a class="link-info mb-3" href="#signin">Sign in | Log In</a> 
+            <a class="link-info" href="#fondobanner">About Shrek</a>
+        </div>
+    
+        <div class="col h-100">
+          <h5>Best Sellers</h5>
+          <img src="./img/gorro.webp" class="img-fluid w-100 h-25" >
+              
+          <h5>Gorro Lana Shrek</h5>
+          <p>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+          </p>     
+        </div>
+        <div class="col h-100">
+            <p>Connect With Shrek</p>
+            <div class="row mb-4">
+              <div class="col-2"> <a href="https://www.facebook.com/shrekparasiempre" target="_blank"><i class="fab fa-facebook-square social fa-2x text-warning"></i></a> </div>
+              <div class="col-2"> <a href="https://www.instagram.com/officiallyshrek/?hl=es" target="_blank"><i class="fab fa-instagram social fa-2x text-warning"></i></a> </div>
+              <div class="col-2"> <a href="https://twitter.com/ShrekHistory" target="_blank"><i class="fab fa-twitter-square social fa-2x text-warning"></i></a></div>
+              <div class="col-2"><a href="https://www.youtube.com/c/HeyPrinceShrek/featured" target="_blank"><i class="fab fa-youtube social fa-2x text-warning"></i  ></a></div>        
+            </div>
+            <div class="d-flex flex-column">
+            <a href="https://en.wikipedia.org/wiki/Shrek" class="text-decoration-none mb-3 link-info" target="_blank">Shrek / Wikipedia</a>
+            <a href="https://www.imdb.com/title/tt0126029/" class="text-decoration-none mb-3 link-info" target="_blank">Shrek / Imdb</a>
+            <a href="https://www.dreamworks.com/movies/shrek" class="text-decoration-none mb-3 link-info" target="_blank">Shrek / DreamWorks</a>
+            <a href="https://www.rottentomatoes.com/m/shrek" class="text-decoration-none mb-3 link-info" target="_blank">Shrek / Rottentomatoes</a>
+            <a href="https://co.pinterest.com/paulaknee/shrek/" class="text-decoration-none mb-3 link-info" target="_blank">Shrek / Pinteres </a>
+            </div>
+        </div>
+      </div>
+    </div>  
+    <div class="row p-3 bg-warning text-white ">
+      <div class=" d-flex justify-content-between">
+          <p class="my-auto text-center">copyright <i class="fa-solid fa-copyright me-1"></i>2021 Sebastian Lopez - All right reserved | This website is made with <a href="https://getbootstrap.com/" class="link-success">Bootstrap</a></p>
+          <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link text-decoration-none link-light fw-bold">Terms & Conditions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-decoration-none link-light fw-bold">Privacy Policy</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-decoration-none link-light fw-bold">Compliances</a></li>
+          </ul>
+        </div>
+    </div>
   </footer>
   <script src="js/firebase.js" type="module"></script>
   <script src="wow.min.js"> </script>
@@ -296,3 +345,6 @@
 
 </html>
 
+<!--     <span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-facebook-square text-white"></i></span></a>
+       <span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-twitter text-white"></i></span></a>
+        <span class="p-3 bg-warning rounded-circle h-75 w-75"><i class="fa-brands fa-instagram text-white"></i></span></a>-->
