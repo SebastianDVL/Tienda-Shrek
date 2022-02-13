@@ -45,7 +45,7 @@ export function validateForm() {
         })
 
         //evento de blur para validacion en tiempo real de la contraseña y el mail
-            email.addEventListener("blur", function deleteThis(e){
+            email.addEventListener("blur", e =>{
                 validate(e,/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,"invalid Email!",email,password,span,btnRegistro)
             })
             password.addEventListener('blur', e => {
