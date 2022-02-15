@@ -6,7 +6,7 @@ export function verCarrito(carrito,h3){
     
     contenedor.innerHTML = ""
     let subtotals = []
-
+    let cantidades = [0]
     carrito.forEach(producto => {    
     
         let fila=document.createElement("div")
@@ -37,6 +37,7 @@ export function verCarrito(carrito,h3){
         cantidadProducto.textContent="Cantidad: " + producto.cantidad
         cantidadProducto.classList.add("text-muted")
 
+        cantidades.push(parseInt(producto.cantidad))
         let realNumber = producto.precio.slice(1).replace(".","")
         let subtotalValue = realNumber * producto.cantidad 
         let subtotal = document.createElement("h5")
@@ -57,8 +58,14 @@ export function verCarrito(carrito,h3){
         fila.appendChild(columna2)
         contenedor.appendChild(fila)
     })
+    //Decirle al usuario cuantos productos esta llevando
+    let totalText = document.querySelector("#totalText")
+    cantidades = cantidades.reduce((currentCantidad,cantidad) =>{
+        return cantidad + currentCantidad
+    },0)
+    cantidades  == 1 ? totalText.textContent = `Total (${cantidades} producto):` : totalText.textContent = `Total (${cantidades} productos):`
 
-   
+    
      //cambiar de COP a USD  
     let convert = document.querySelector("#convert")
 
@@ -74,11 +81,11 @@ export function verCarrito(carrito,h3){
         bool = !bool
         if(bool){
             total *= 0.00025 ;
-            totalH3.innerHTML = "Total: $" + Intl.NumberFormat("en-US").format(total) + " USD"
+            totalH3.innerHTML = "$" + Intl.NumberFormat("en-US").format(total) + " USD"
             convert.innerHTML ="Convert to COP"  
         }else{
             total *= 4000 ;
-            totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total) + " COP"
+            totalH3.innerHTML = "$" + Intl.NumberFormat("de-DE").format(total) + " COP"
             convert.innerHTML ="Convert to USD"  
         }
          
@@ -93,7 +100,7 @@ export function verCarrito(carrito,h3){
     
 
     let totalH3 = document.querySelector("#total")
-    totalH3.innerHTML = "Total: $" + Intl.NumberFormat("de-DE").format(total) + " COP"
+    totalH3.innerHTML = "$" + Intl.NumberFormat("de-DE").format(total) + " COP"
 
     //Limpiar el carrito con boton
 
@@ -119,11 +126,12 @@ export function verCarrito(carrito,h3){
     function limpiarCarrito(){
         contenedor.innerHTML = ""
         pildora.innerHTML = ""
-        totalH3.innerHTML = "Total: $0"
+        totalH3.innerHTML = "$0"
         carrito.length = 0
         h3.innerHTML = '<i class="fa-solid fa-cart-arrow-down fs-1"></i>No Items Yet...'
         total = 0
         convert.disabled = true
+        totalText.innerHTML = "Total(0 productos):"
     }
  
 }
